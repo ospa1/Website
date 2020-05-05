@@ -89,7 +89,7 @@
 			</table>
 			
 		<li><p>making forms</p>
-		<form action="http://www.example.com/login.php">
+		<form action="http://www.example.com/login.php"><!-- action page on server that will recieve info -->
 		<p>Username:
 		<input type="text" name="username" size="15"
 		 maxlength="30" />
@@ -98,8 +98,15 @@
 		<input type="password" name="password" size="15"
 		 maxlength="30" />
 		</p>
-		<p>Note: dont use this type of form to send passwords as it is not secure. sensitive data needs to sent through SSL.</p>
+		<p>Note: dont use this type of form to send sensitive as it is not secure. sensitive data needs to sent through SSL.</p>
 		</form>
+		<li><p>making radio buttons</p>
+		<p>Please select an option:
+		 <br />
+		 <input type="radio" name="genre" value="rock"
+		 checked="checked" /> Rock
+		 <input type="radio" name="genre" value="paper" /> Paper
+		 <input type="radio" name="genre" value="scissors" /> Scissors
 	
 	<!-- return to the top of the page -->
 	<br />
