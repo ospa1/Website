@@ -90,23 +90,51 @@
 			
 		<li><p>making forms</p>
 		<form action="http://www.example.com/login.php"><!-- action page on server that will recieve info -->
+		
 		<p>Username:
 		<input type="text" name="username" size="15"
 		 maxlength="30" />
 		</p>
+		
 		<p>Password:
 		<input type="password" name="password" size="15"
 		 maxlength="30" />
 		</p>
+		
 		<p>Note: dont use this type of form to send sensitive as it is not secure. sensitive data needs to sent through SSL.</p>
 		</form>
+		
 		<li><p>making radio buttons</p>
+		
 		<p>Please select an option:
 		 <br />
-		 <input type="radio" name="genre" value="rock"
-		 checked="checked" /> Rock
+		 <input type="radio" name="genre" value="rock" checked="checked" /> Rock
 		 <input type="radio" name="genre" value="paper" /> Paper
 		 <input type="radio" name="genre" value="scissors" /> Scissors
+		</p>
+		
+		<li><p>check boxes</p>
+		
+		<p>select used music services: <br />
+			<!--
+				name - is the variable name sent to the server 
+				value - is the options checked sent to the server along with the name
+				checked - boxes will be checked initial when the page loads
+			-->
+			<input type="checkbox" name="service" value="itunes" /> iTunes
+			<input type="checkbox" name="service" value="tidal" /> Tidal
+			<input type="checkbox" name="service" value="lastfm" /> Last.Fm
+			<input type="checkbox" name="service" value="spotify" checked="checked" /> Spotify
+		</p>
+		
+		<li><p>drop down lists</p>
+		<p>How are you connected to the internet?</p>
+			<select name="devices">
+				<option value="pc">PC</option>
+				<option value="phone">Phone</option>
+			</select>
+		
+		
 	
 	<!-- return to the top of the page -->
 	<br />
