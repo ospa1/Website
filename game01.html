@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>01 Game</title>
+		<title id="title">01 Game</title>
 		<link href="game01.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
 		<h1 id="top">0-1 Game!</h1>
+		
+		<!-- instructions -->
+		<p> Guess 0 or 1, trying to outsmart the computer, who is going to
+        <br> attempt to forecast your guesses.  On each move the score indicator
+        <br> moves to the right if the computer guesses correctly, and moves
+        <br> to the left if the computer does not.<br>
+		
+        <p> Press toggle to display the data table.
+        <br> Press reset to reset the board.
+        <br> Good luck, you'll need it!" <br>
+		
+		<p>Computer        Human
+		<br>x---------x---------x
+		<p id="scoreMeter">----------^----------
+		
+		
 		<script src="game01.js"></script> 
 	</body>
 </html>
