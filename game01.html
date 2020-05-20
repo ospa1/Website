@@ -21,14 +21,13 @@
 		<br>x---------x---------x
 		<p id="scoreMeter">----------^----------
 		<p id="score">Turn: 0
-		<p id="display">Choose a number to begin<br>
+		<p id="display">Choose a number to begin<br> </p>
 		
-		<button id="zeroButton">0</button>
-		<button id="oneButton">1</button>
-		<button id="resetButton">reset</button>
-		<button id="toggleButton">toggle</button>
-		
-		
+		<button id="zeroButton" onclick="score(0)">0</button>
+		<button id="oneButton" onclick="score(1)">1</button>
+		<button id="resetButton" onclick="resetGame()">reset</button>
+		<button id="toggleButton" onclick="displayTable()">toggle</button>
+				
 		<script src="game01.js"></script> 
 	</body>
 </html>
