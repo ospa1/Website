@@ -9,6 +9,12 @@ let lastThreeMoves = [0,0,0];
 let compGuess =0;
 let meter = '----------^----------';
 
+// replaces a string with a another at an index
+// returns a string 
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
+
 // reset function
 function resetGame(){
 	
@@ -22,11 +28,14 @@ function resetGame(){
     
     // resets the moveCount back to 0.
     moveCount = 0;
+	var counterText = document.getElementById('score');
+	counterText.textContent = 'Turn: 0';
 	
 	// reset meter
 	let meterEl = document.getElementById('scoreMeter');
 	meter = '----------^----------';
 	meterEl.textContent = meter;	
+	
 	
 	// notify player
 	let disp = document.getElementById("display")
@@ -104,8 +113,8 @@ function moveMarker(userNum){
 	let i = 0;
     for (i =0; i< 21; i++){
         if (meter.charAt(i) == '^'){
-            meter[i + direction] = '^';
-            meter[i] = ' ';
+            meter = meter.replaceAt(i+direction, "^");
+            meter = meter.replaceAt(i, "-");
             break;
         }
     }
@@ -176,3 +185,4 @@ function increaseCount(){
 	moveCount++;
 	counterText.textContent = 'Turn: ' + String(moveCount);
 }
+
