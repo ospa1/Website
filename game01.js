@@ -28,7 +28,7 @@ function resetGame(){
 // display the board, last 3 moves and forecast
 function displayTable(){
 	let disp = document.getElementById("display")
-	disp.textContent = tableArray;
+	disp.textContent = tableArray.toString();
 }	
 
 // updates the table by adding 1 to the corresponding row and column in the 2D array.
