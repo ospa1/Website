@@ -6,8 +6,8 @@ let tableArray = [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]
 const possibleList = ["000","001","010","011","100","101","110","111"]; 
 let lastMove = 0;
 let lastThreeMoves = [0,0,0];
-let forecast = 0;
 let compGuess =0;
+let meter = '----------^----------';
 
 // reset function
 function resetGame(){
@@ -24,8 +24,9 @@ function resetGame(){
     moveCount = 0;
 	
 	// reset meter
-	let meter = document.getElementById('scoreMeter');
-	meter.textContent = '----------^----------';	
+	let meterEl = document.getElementById('scoreMeter');
+	meter = '----------^----------';
+	meterEl.textContent = meter;	
 	
 	// notify player
 	let disp = document.getElementById("display")
@@ -58,10 +59,8 @@ function updateTable(num){
 // compares the userInput and computerGuess values and move the marker,
 // tells the user who got a point, and updates the last three moves.
 function score(num){
-	//check end state
-	let meter = document.getElementById('scoreMeter');
-	let innerMeter = meter.textContent;	
-	if(innerMeter.charAt(0) == '^' || innerMeter.charAt(20) == '^'){
+	//check end state	
+	if(meter.charAt(0) == '^' || meter.charAt(20) == '^'){
 		return
 	}
 	//make the computer predict first;
@@ -73,6 +72,9 @@ function score(num){
 	//move the marker and return feedback
 	moveMarker(num);
 	
+	//increase turn count
+	increaseCount();
+	
 	//update last three moves
     lastThreeMoves[0] = lastThreeMoves[1];
     lastThreeMoves[1] = lastThreeMoves[2];
@@ -82,8 +84,7 @@ function score(num){
 // Moves the '^' marker left or right depending on the result of scoreUpdate.
 function moveMarker(userNum){
 	
-	let meterEl = document.getElementById('scoreMeter');
-	let meter = meterEl.textContent;	
+	let meterEl = document.getElementById('scoreMeter');	
 	let direction = 0;
 	
 	let disp = document.getElementById("display")
@@ -103,8 +104,8 @@ function moveMarker(userNum){
 	let i = 0;
     for (i =0; i< 21; i++){
         if (meter.charAt(i) == '^'){
-            meter.charAt(i + direction) = '^';
-            meter.charAt(i) = ' ';
+            meter[i + direction] = '^';
+            meter[i] = ' ';
             break;
         }
     }
@@ -156,7 +157,7 @@ function computerPrediction(){
 				
 				// if a tie occurs return opposite of previous move
                 else{
-                    if (lastMatch == 0){
+                    if (lastMove == 0){
                         compGuess = 1;
                     }
                     else{
@@ -167,4 +168,11 @@ function computerPrediction(){
 			}
 		}
 	}
+}
+
+// increases the count
+function increaseCount(){
+	var counterText = document.getElementById('score');
+	moveCount++;
+	counterText.textContent = 'Turn: ' + String(moveCount);
 }
