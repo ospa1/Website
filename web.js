@@ -10,4 +10,5 @@ function increaseCount(){
 	var counterText = document.getElementById('counter');
 	count++;
 	counterText.textContent = String(count);
+	
 }
