@@ -1,14 +1,16 @@
 //display the date
-var date = new Date();
-var elem = document.getElementById('date');
-elem.textContent = date.toString();
-
+function displayDate(id){
+	const date = new Date();
+	let elem = document.getElementById(id);
+	elem.textContent = date.toString();
+}
 
 //changes the counter when the button is pressed
-var count = 0;
-function increaseCount(){
-	var counterText = document.getElementById('counter');
+function increaseCount(id){
+	let counterText = document.getElementById(id);
+	let val = counterText.value;
+	let count = Number(val);
 	count++;
-	counterText.textContent = String(count);
+	counterText.textContent = String(count.toString());
 	
 }
