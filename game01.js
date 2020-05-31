@@ -158,10 +158,10 @@ function computerPrediction(){
 				
 				// checks which side has highest frequency
 				if(tableArray[i][0] > tableArray[i][1]){
-					compGuess = 0
+					compGuess = 0;
 				}
 				else if (tableArray [i][0] < tableArray [i][1]){
-                    compGuess = 1;
+                    compGuess = 1; 
                 }
 				
 				// if a tie occurs return opposite of previous move
