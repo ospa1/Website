@@ -1,8 +1,18 @@
 body {
 	font-family: Arial;
-	background-image: url("https://cdn.wallpapersafari.com/51/78/dltnIv.jpg");
+	/*background-image: url("https://cdn.wallpapersafari.com/51/78/dltnIv.jpg");*/
+}
+.game{
+	text-align: center;
 }
 h1 {
 	color: green;
 	text-align: center;
+}
+aside{
+	display:block;
+	float: right;
+	padding: 0px 0px 0px 20px;
+	border-bottom: 1px solid #eeeeee;
+	background-color: #efefef;
 }
