@@ -1,7 +1,7 @@
 body {
 	font-family: Arial;
 	background-image: url("https://cdn.wallpapersafari.com/51/78/dltnIv.jpg");
-}
+}	
 h1 {
 	color: blue;
 }
@@ -14,3 +14,9 @@ img.banner{
 	display: block;
 	margin: 0px auto;;
 }
+img.spaceImg{
+	width: 450px;
+	height: 450px;
+	border-radius: 300px;
+}
+	

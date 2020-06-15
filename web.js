@@ -13,5 +13,9 @@ function increaseCount(id){
 	let counterText = document.getElementById(id);
 	counter++;
 	counterText.textContent = String(counter);
-	
+}
+
+let number = 0;
+function increment(){
+	number++;
 }
