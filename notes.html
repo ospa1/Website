@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Notes</title>
+	  <link href="site.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1 id="top">Notes!</h1><!-- goes here when top link is clicked-->
+	<h3 id="date" class="date">date</h3>
+	<script src="web.js"></script> 
+	
+	<nav>
+		<ul class="nav"><!-- unordered list - each list item has <li> prefix -->		  
+		  <li><a href="#html">HTML</a><br /> <!--goes to the assigend id below-->
+			<ul>
+				<li><a href="#Notes">Notes</a><br />
+			</ul>
+			
+		  <li><a href="#css">CSS</a><br />
+			  <ul>
+				<li><a href="#Notes_css">Notes</a><br />
+			  </ul>
+
+		  <li><a href="#js">Javascript</a><br />  
+			  <ul>
+				<li><a href="#Notes_css">Notes</a><br /> 
+			  </ul>		  
+		  <li><a href="#todo">TODO</a><br />
+		</ul>
+	</nav>
+	
+    <p><hr /><!-- adds a horizontal line -->
+	  <b>here is where i keep track of what i've been doing</b><!-- b makes it bold -->
+    </p>
+	<h2 id="html">HTML</h2>
+	<img class="banner" src="./images/html.png">
+    <h3 id="Notes">Notes</h3>
+  	<ol>
+          <li><p>how to add images from a source</p>
+			<img class="spaceImg" src="https://www.scitecheuropa.eu/wp-content/uploads/2019/07/ClaudioVentrella.jpg"/> 
+	
+		  <li><p>how to add comments to the html </p> <!-- -->
+		  <li><p>how to add links and open on same <a href="https://www.google.com">page</a> or <a href="https://www.google.com" target="_blank">a new page</a></p>
+		  <li><p>return to the top of the page or any onther part of the page</p>
+		  <p><a href="#top">Top</a></p>
+		  <li><p>how to make tables</p>
+		  <table>
+			<tr>
+				<th></th>
+				<th scope="col">col1</th>
+				<th scope="col">col2</th>
+			</tr>
+			<tr>
+				<th scope="row">row1</th>
+				<td>1</td>
+				<td>2</td>
+			</td>
+			<tr>
+				<th scope="row">row2</th>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			</table>
+		  <li><p>make long tables</p>
+		  <table>
+			 <thead>
+			 <tr>
+			 <th>Date</th>
+			 <th>Income</th>
+			 <th>Expenditure</th>
+			 </tr>
+			 </thead>
+			 <tbody>
+			 <tr>
+			 <th>1st January</th>
+			 <td>250</td>
+			 <td>36</td>
+			 </tr>
+			 <tr>
+			 <th>2nd January</th>
+			 <td>285</td>
+			 <td>48</td>
+			 </tr>
+			 <!-- additional rows as above -->
+			 <tr>
+			 <th>...</th>
+			 <td>...</td>
+			 <td>...</td>
+			 </tr>
+			 <tr>
+			 <th>31st January</th>
+			 <td>129</td>
+			 <td>64</td>
+			 </tr>
+			 </tbody>
+			 <tfoot>
+			 <tr>
+			 <td></td>
+			 <td>7824</td>
+			 <td>1241</td>
+			 </tr>
+			 </tfoot>
+			</table>
+			
+		<li><p>making forms</p>
+		<form action="http://www.example.com/login.php"><!-- action page on server that will recieve info -->
+		
+		<p>Username:
+		<input type="text" name="username" size="15"
+		 maxlength="30" />
+		</p>
+		
+		<p>Password:
+		<input type="password" name="password" size="15"
+		 maxlength="30" />
+		</p>
+		
+		<p>Note: dont use this type of form to send sensitive as it is not secure. sensitive data needs to sent through SSL.</p>
+		</form>
+		
+		<li><p>making radio buttons</p>
+		
+		<p>Please select an option:
+		 <br />
+		 <input type="radio" name="genre" value="rock" checked="checked" /> Rock
+		 <input type="radio" name="genre" value="paper" /> Paper
+		 <input type="radio" name="genre" value="scissors" /> Scissors
+		</p>
+		
+		<li><p>check boxes</p>
+		
+		<p>select used music services: <br />
+			<!--
+				name - is the variable name sent to the server 
+				value - is the options checked sent to the server along with the name
+				checked - boxes will be checked initial when the page loads
+			-->
+			<input type="checkbox" name="service" value="itunes" /> iTunes
+			<input type="checkbox" name="service" value="tidal" /> Tidal
+			<input type="checkbox" name="service" value="lastfm" /> Last.Fm
+			<input type="checkbox" name="service" value="spotify" checked="checked" /> Spotify
+		</p>
+		
+		<li><p>drop down lists</p>
+		<p>How are you connected to the internet?</p>
+			<select name="devices">
+				<option value="pc">PC</option>
+				<option value="phone">Phone</option>
+			</select>
+			
+		<li><p>embed youtube videos using iframe</p>
+		<!-- https://www.youtube.com/watch?v=5qap5aO4i9A
+			to use youtube video api, go to video you want to embed->share->embed->copy and paste html -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/5qap5aO4i9A" 
+			frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
+			picture-in-picture" allowfullscreen></iframe>
+		
+		<li><p>how to link an html file to a css file</p>
+		<li><p>buttons</p>
+		<button id="numButton" onclick="increaseCount('counter')">click</button>
+		<p id="counter">0</p>
+		
+		<li><p>The div tag is used as a container for HTML elements - which is then styled with CSS<br>
+			   or manipulated with JavaScript by using the class or id attribute.<br></p> 
+		
+		<!-- test for angular 
+		<div class="container">		
+			<div class="number-display">
+				{{number}}
+			</div>
+			<button (click)="increment()">increment</button>
+		</div>
+		-->
+		<!-- have to link it within the header -->
+	</ol><!-- end html -->
+	
+	<!-- CSS -->
+	<h2 id="css">CSS</h2>
+	<img class="banner" src="./images/css.png">
+    <h3 id="Notes_css">Notes</h3>
+	<ol>
+		<li>how to change fonts
+		<li>changing colors
+		<li>changing background colors
+		<li>add a background image
+		<li>round images using border-radius set to half of the height and width 
+		<li>pixel values are applied in order: top,right,down,left and in cases like border-radius:top-left,top-right,bottom-right,bottom-left		
+	</ol><!-- end css -->
+		
+	<!-- javascript -->
+	<h2 id="js">JS</h2>
+	<img class="banner" src="./images/javascript.png">
+    <h3 id="Notes_js">Notes</h3>
+	<ol>
+		<li>how to connect js with html using script tag
+		<li>displayed the date using the date class
+		<li>functions and anonymous functions
+		<li>changing contents of the html 
+		<li>use let and const rather than var
+		<li>strings are immutable
+		<li>use === and !== to compare type and value
+	</ol><!-- end js -->
+	
+	<!-- TODO -->
+	<h2 id="todo">TODO</h2>
+	<ul>
+		<li>add a nav bar at the top
+		<li>re organize web page by setting notes to other page accesssed by nav bar
+		<li>make more web apps with javascript
+		<li>make guessing game's page better
+		<li>make aside work on game01
+		<li>maybe add a small description next to the link for web apps
+		<li>add mobile apps projects to the github
+	</ul><!--end todo -->
+	
+	<!-- return to the top of the page -->
+	<br />
+	<p><a href="#top">Top</a></p>
+    <!-- how to comment-->
+  </body>
+</html>

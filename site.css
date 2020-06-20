@@ -26,10 +26,6 @@ nav ul{
 .nav{  
   vertical-align: top; 
   display: inline-block;
-  box-shadow: 
-    1px -1px -1px 1px #000, 
-    -1px 1px -1px 1px #fff, 
-    0 0 6px 3px #fff;
   border-radius:6px;
 }
 .nav li {
@@ -113,10 +109,15 @@ nav ul{
   right: 10px; 
 }
 h1 {
+	text-align: center;
 	color: blue;
 }
 h2 {
 	background-color: #ee3e80;
+	text-align: center;
+}
+.date{
+	text-align: center;
 }
 img.banner{
 	width: 200px;
@@ -129,4 +130,6 @@ img.spaceImg{
 	height: 450px;
 	border-radius: 300px;
 }
+.top{
+	text-align: center;
 	
