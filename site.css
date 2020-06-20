@@ -114,6 +114,7 @@ h1 {
 }
 h2 {
 	background-color: #ee3e80;
+	text-align: center;
 }
 .date{
 	text-align: center;
@@ -129,4 +130,6 @@ img.spaceImg{
 	height: 450px;
 	border-radius: 300px;
 }
+.top{
+	text-align: center;
 	
