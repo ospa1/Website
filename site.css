@@ -1,5 +1,5 @@
 body {
-	font-family: Arial;
+	font-family: Arial, serif;
 	background-image: url("./images/background.jpg");
 }	
 nav{
@@ -110,11 +110,12 @@ nav ul{
 }
 h1 {
 	text-align: center;
-	color: blue;
+	color: black;
 }
 h2 {
 	background-color: #ee3e80;
 	text-align: center;
+	font-weight: bold;
 }
 .date{
 	text-align: center;
